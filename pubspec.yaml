@@ -24,6 +24,19 @@ dependencies:
   shimmer: ^3.0.0           # تأثير التحميل الاحترافي
   pdf: ^3.11.1              # بناء ملف PDF
   printing: ^5.13.2         # مشاركة/حفظ ملف PDF
+  cleartec_docx_template: ^0.4.1  # تعبئة قالب Word (نسخة مُصلَحة من docx_template)
+  image_picker: ^1.1.2      # اختيار صور (جداول/شعار)
+  file_picker: ^8.1.4       # اختيار ملف إكسل
+  excel: ^4.0.6              # قراءة محتوى ملف إكسل كنص
+  path_provider: ^2.1.4     # لحفظ الملف مؤقتاً قبل مشاركته
+  share_plus: ^10.1.2       # مشاركة أي نوع ملف (مش بس PDF)
+  shared_preferences: ^2.3.2  # حفظ دائم للتقارير جوا التطبيق
+  cunning_document_scanner: ^3.0.3  # مسح ضوئي للمستندات (Android/iOS فقط)
+  flutter_map: ^7.0.2       # خرائط OpenStreetMap المجانية (بدون مفتاح API)
+  geolocator: ^13.0.1       # الوصول لموقع GPS
+  latlong2: ^0.9.1          # نوع بيانات الإحداثيات اللي بيستخدمه flutter_map
+  firebase_core: ^3.8.0      # ربط أساسي مع Firebase
+  cloud_firestore: ^5.5.0    # قاعدة البيانات المشتركة
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +62,8 @@ flutter:
     - assets/app_icon.png
     - assets/fonts/Amiri-Regular.ttf
     - assets/fonts/Amiri-Bold.ttf
+    - assets/templates/template_test.docx
+    - assets/templates/template_report.docx
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

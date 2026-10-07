@@ -11,31 +11,26 @@ import '../widgets/labeled_text_field.dart';
 
 enum ViewState { idle, loading, result, error }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class CvScreen extends StatefulWidget {
+  final AppLanguage language;
+  const CvScreen({super.key, required this.language});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<CvScreen> createState() => _CvScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _CvScreenState extends State<CvScreen> {
   final _jobController = TextEditingController();
   final _cvController = TextEditingController();
 
-  AppLanguage _language = AppLanguage.ar;
   ViewState _state = ViewState.idle;
   ResumeData? _resume;
   ApiErrorType? _errorType;
   bool _isExportingPdf = false;
 
+  AppLanguage get _language => widget.language;
   AppStrings get t => AppStrings(_language);
   bool get _isArabic => _language == AppLanguage.ar;
-
-  void _toggleLanguage() {
-    setState(() {
-      _language = _language == AppLanguage.ar ? AppLanguage.en : AppLanguage.ar;
-    });
-  }
 
   Future<void> _submit() async {
     if (_jobController.text.trim().isEmpty || _cvController.text.trim().isEmpty) {
@@ -117,13 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
       textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(t.appTitle),
-          actions: [
-            TextButton(
-              onPressed: _toggleLanguage,
-              child: Text(isRtl ? 'English' : 'عربي', style: const TextStyle(fontWeight: FontWeight.bold)),
-            ),
-          ],
+          title: Text(t.cvCardTitle.replaceAll('📄 ', '')),
         ),
         body: SafeArea(
           child: SingleChildScrollView(

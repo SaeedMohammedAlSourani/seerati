@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756730184447",
+    "project_id": "saeed-project-ata",
+    "storage_bucket": "saeed-project-ata.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756730184447:android:c00ea150eb7e17ee98c2ca",
+        "android_client_info": {
+          "package_name": "com.example.seerati"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAukJPRf9V-ix1mJUTSwcgFy71UeZBOyV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
